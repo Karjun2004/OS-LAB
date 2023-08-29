@@ -1,18 +1,20 @@
 #include<stdio.h>
 main()
 {
-  int p[20],bt[20],pri[20], wt[20],tat[20],i, k, n, temp; float wtavg,
-  tatavg;
+  int p[20],bt[20],pri[20], wt[20],tat[20],i, k, n, temp; 
+  float wtavg,tatavg;
   printf("Enter the number of processes --- ");
   scanf("%d",&n);
-  for(i=0;i<n;i++){
+  for(i=0;i<n;i++)
+{
   p[i] = i;
   printf("Enter the Burst Time & Priority of Process %d --- ",i); 
   scanf("%d%d",&bt[i], &pri[i]);
 }
   for(i=0;i<n;i++)
   for(k=i+1;k<n;k++)
-  if(pri[i] > pri[k]){
+  if(pri[i] > pri[k])
+{
   temp=p[i];
   p[i]=p[k];
   p[k]=temp;
